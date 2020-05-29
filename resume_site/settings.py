@@ -131,5 +131,5 @@ MEDIA_ROOT =os.path.join(BASE_DIR, 'resume/media')
 
 STATIC_ROOT =os.path.join(PROJECT_ROOT, 'resume/static')
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join(PROJECT_ROOT, 'resume/static'),
 )
