@@ -16,7 +16,7 @@ def welcome(request):
     return render(request, "resume/welcome.html", {"flag":t})
 
 def link(request, user_username):
-    link = f"http://127.0.0.1:8000/{request.user.username}/template"
+    link = f"https://tegacvmaster.herokuapp.com/{request.user.username}/template"
     return render(request, "resume/link.html", {"link":link})
 
 def template(request, user_username):
