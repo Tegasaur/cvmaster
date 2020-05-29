@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-ol7okte2w^8)0)%s8aox*sndde=8*hi#*h2^7%(5l_e8v3yv-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["https://tegacvmaster.herokuapp.com/"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
