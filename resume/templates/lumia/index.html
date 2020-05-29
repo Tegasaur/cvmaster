@@ -1,0 +1,267 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  {% for p in person %}
+  <title> {{p.Name}} Resume Site </title>
+  {% endfor %}
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons --> 
+              
+  <link href="{% static 's2/img/favicon-32x32.png' %}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 's2/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 's2/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 's2/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 's2/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 's2/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 's2/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 's2/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Lumia - v2.0.0
+  * Template static: https://bootstrapmade.com/lumia-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      {% for p in person %}
+      <div class="logo mr-auto">
+        
+        <h1><a href="index.html">{{p.Name}}</a></h1>
+        
+      </div>
+      <p class =  "col-4" style ='padding-top: 15px'> Phone: +1 {{number1}}-{{number2}}-{{number3}} </p>
+      <p class =  "col-4" style ='padding-top: 15px'> Email: {{p.Email}} </p>
+
+      <div class="header-social-links">
+        <a href=" {{p.LinkedIn}} " class="linkedin"><i class="icofont-linkedin"></i></i></a>
+      </div>
+      {% endfor %}
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  {% for p in person %}
+  <section style="background-image: url( {{p.balanced_image.url}} );" id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  {% endfor %}
+    <div class="container text-center text-md-left" data-aos="fade-up" >
+      <h1 style = "text-align: centre;">Summary</h1>
+      {% for p in person %}
+      <h2> {{p.Profile}} </h2>
+      {% endfor %}
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= What We Do Section ======= -->
+    <section id="what-we-do" class="what-we-do">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Education</h2>
+        </div>
+
+        <div class="row">
+          {% for e in education %}
+          <div class=" d-flex align-items-stretch" style="margin: 10px auto;">
+            <div class="icon-box">
+              <h4>{{e.School}}</h4>
+              <p>Major: {{e.Major}}</p>
+              <p>Minor: {{e.Minor}}</p>
+              <p>Important Classes: {{e.Coursework}}</p>
+            </div>
+          </div>
+          {% endfor%}
+        </div>
+
+      </div>
+    </section><!-- End What We Do Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Experience</h2>
+        </div>
+
+        <div class="row">
+          {% for e in experience %}
+          <div class="" style="margin: 10px auto;">
+            <h4>{{e.Organization}}</h4>
+            <ul>
+              <li><i class="bx bx-check-double"></i> Start Date : {{e.Startdate}}</li>
+              <li><i class="bx bx-check-double"></i> End Date : {{e.Enddate}}</li>
+              <li><i class="bx bx-check-double"></i> Role: {{e.Role}}</li>
+            </ul>
+            <p>
+              {{e.Information}}
+            </p>
+            <div class="row icon-boxes">
+              <div class="" style="margin: 0 auto;">
+                <i class="bx bx-receipt"></i>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+        <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Involvements</h2>
+        </div>
+
+        <div class="row" >
+          {% for i in involve %}
+          <div class="col-md-6" style="margin: 0 auto;">
+            <div class="icon-box">
+              <h4><a href="#">{{i.Organization}}</a></h4>
+                <p><i class="bx bx-check-double"></i>Start Date : {{i.Startdate}}</p>
+                <p><i class="bx bx-check-double"></i>End Date : {{i.Enddate}}</p>
+                <p><i class="bx bx-check-double"></i>Role: {{i.Role}}</p>
+                <p>{{i.Information}}</p>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2> Projects </h2>
+          <p>Just a few thing i fiddled with</p>
+        </div>
+
+        <div class="owl-carousel testimonials-carousel">
+          
+          {% for p in proj %}
+          <div class="testimonial-item">
+            <h3>{{p.Title}}</h3>
+            <p style = "word-break: break-all;">
+              {{p.Infromation}}
+            </p>
+          </div>
+          {% endfor %}
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+        
+        <div class="section-title">
+          <h2>Skills</h2>
+        </div>
+        
+        <div class="row">
+          <div class="  d-flex align-items-stretch" style="margin: 0 auto;">
+            <div class="member">
+              {% for p in person %}
+              <img src=" {{ p.profile_image.url}} " alt="" width="200" height="200">
+              {% endfor %}
+              {% for s in skill %}
+              <p>
+                Skills: <br>
+                {{s.Information}}
+              </p>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row mt-5 justify-content-center">
+
+          <div class="col-lg-10">
+            {% for p in person %}
+            <div class="info-wrap">
+              <div class="row">
+                <div class="col-lg-4 info">
+                  <i class="icofont-google-map"></i>
+                  <h4>Address:</h4>
+                  <p>{{p.Address}}</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="icofont-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>{{p.Email}}</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="icofont-phone"></i>
+                  <h4>Call:</h4>
+                  <p>+1 {{number1}}-{{number2}}-{{number3}}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 's2/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 's2/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 's2/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 's2/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 's2/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 's2/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 's2/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 's2/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 's2/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 's2/js/main.js' %}"></script>
+
+</body>
+
+</html>

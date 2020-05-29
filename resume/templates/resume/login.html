@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+  Login
+{% endblock title %}
+{% block main %}
+
+<div class = "container" style = "padding: 20px 20px 20px 20px; border-radius: 25px; margin: 150px 150px 150px 200px;">
+    <hr>
+    <div class="section-title" data-aos="zoom-out">
+        <h2>login</h2>
+        <p>LOGIN</p>
+      </div>
+    <main role="main" class="inner cover">
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <p class="lead">
+                <button class="btn btn-secondary" type="submit" style = "  background: #ef6603;
+                border: #ef6603;
+                border-radius: 200px;" >Login</button>
+            </p>
+        </form>
+    </main>
+    <hr>
+</div>
+
+{% endblock main %}

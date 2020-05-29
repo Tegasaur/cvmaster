@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+  Welcome
+{% endblock title %}
+{% block main %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+  <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="carousel-container">
+        <h2 class="animated fadeInDown">Welcome to <span>CV Master</span></h2>
+        <!-- <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p> -->
+        {% if user.is_authenticated %}
+        {% if flag == "True" %}
+        <a href="{% url 'template' request.user.pk %}" class="btn-get-started animated fadeInUp scrollto">Open Site</a>
+        <a href="{% url 'link' request.user.pk %}" class="btn-get-started animated fadeInUp scrollto">Get Site Link</a>
+        {% else %}
+        <a href="{% url 'register_edu' %}" class="btn-get-started animated fadeInUp scrollto">Create Site</a>
+        {% endif %}
+        {% else %}
+        <a href="{% url 'resume_login' %}" class="btn-get-started animated fadeInUp scrollto">Login</a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="carousel-container">
+        <h2 class="animated fadeInDown">Have a nice time</h2>
+        <!-- <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p> -->
+        {% if user.is_authenticated %}
+        {% if flag == "True" %}
+        <a href="{% url 'template' request.user.pk %}" class="btn-get-started animated fadeInUp scrollto">Open Site</a>
+        <a href="{% url 'link' request.user.pk %}" class="btn-get-started animated fadeInUp scrollto">Get Site Link</a>
+        {% else %}
+        <a href="{% url 'register_edu' %}" class="btn-get-started animated fadeInUp scrollto">Create Site</a>
+        {% endif %}
+        {% else %}
+        <a href="{% url 'resume_login' %}" class="btn-get-started animated fadeInUp scrollto">Login</a>
+        {% endif %}
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+  </div>
+
+  <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+    <defs>
+      <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+    </defs>
+    <g class="wave1">
+      <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+    </g>
+    <g class="wave2">
+      <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+    </g>
+    <g class="wave3">
+      <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+    </g>
+  </svg>
+
+</section><!-- End Hero -->
+
+<main id="main">
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container">
+
+      <div class="section-title" data-aos="zoom-out">
+        <h2>About</h2>
+        <p>Who I am</p>
+      </div>
+
+      <div class="row content" data-aos="fade-up">
+        <div class="col-lg-6">
+          <p>
+            Texas Tech student, Computer Engineering Major and intermediate website deveploper. First product i want to release to public use.
+            This device is created with NSBE in mind in preparation for the NSBE 46th Annual convention. Will gice you an opportunity to:
+          </p>
+          <ul>
+            <li><i class="ri-check-double-line"></i> Create a beautifully styled resume with your chosen template</li>
+            <li><i class="ri-check-double-line"></i> Have a personal online website with the effort of filling a form</li>
+            <li><i class="ri-check-double-line"></i> Pay a one time inexpensive fee</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <p>
+            The reason for this is cause I have unused cloud space from a hackathon that rots away. I am deciding to put it to good use for all of you
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Section -->
+
+  <!-- ======= Features Section ======= -->
+  <section id="features" class="features">
+    <div class="container">
+
+
+      <div class="tab-content" data-aos="fade-up">
+        <div class="tab-pane active show" id="tab-1">
+          <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+              <h3>Special Shout Out</h3>
+              <p class="font-italic">
+                Just want a few people who supported me to see this. Plus i've run out of content (as you would assume)
+              </p>
+              <ul>
+                <li><i class="ri-check-double-line"></i> My siblings Daniel, David and Peace (and my parents). Love you</li>
+                <li><i class="ri-check-double-line"></i> My roomies OliseHHHHHH and moshpit </li>
+                <!-- <li><i class="ri-check-double-line"></i> My closes friend for now, Bee. Love ya</li> -->
+                <li><i class="ri-check-double-line"></i> Those other idiot engineers i know (Francis, Prosper, Ahmed, Mushfique, Mohak, Bailey etc)</li>
+                <li><i class="ri-check-double-line"></i> Tha Kenyans </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+              <img src="{% static 's1/img/resume_pic.jpg' %}" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </section><!-- End Features Section -->
+
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title" data-aos="zoom-out">
+        <h2>Services</h2>
+        <p>What we do offer</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="icon-box" data-aos="zoom-in-left">
+            <div class="icon"><i class="las la-basketball-ball" style="color: #ff689b;"></i></div>
+            <h4 class="title"><a href="">Multiple Templates</a></h4>
+            <p class="description">Many beautifully rendered templates to choose from </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+          <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+            <div class="icon"><i class="las la-book" style="color: #e9bf06;"></i></div>
+            <h4 class="title"><a href="">Dynamic Templates</a></h4>
+            <p class="description"> Single form filled generates dynamic website</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
+          <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
+            <div class="icon"><i class="las la-file-alt" style="color: #3fcdc7;"></i></div>
+            <h4 class="title"><a href="">One Time Payment</a></h4>
+            <p class="description">Cloud space for life on a single payment </p>
+          </div>
+        </div>
+    </div>
+  </section><!-- End Services Section -->
+
+</main><!-- End #main -->
+
+{% endblock main %}
