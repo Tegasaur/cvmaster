@@ -72,7 +72,7 @@
 
   <!-- ======= Hero Section ======= -->
   {% for p in person %}
-  <section style ="background: url( {{p.balanced_image.url}} )  top center;" id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <section style ="background: url( {{p.balanced_image.url}} ) no-repeat; background-size: 100%;" id="hero" class="d-flex flex-column justify-content-center align-items-center">
   {% endfor %}
 
     {% for p in person %}
@@ -97,7 +97,7 @@
             {% for p in person %}
             <div class="row">
               <div class="col-lg-6">
-                <p style = "word-break: break-all;"> {{p.Profile}} </p>
+                <p style = "white-space: normal;"> {{p.Profile}} </p>
               </div>
             </div>
             {% endfor %}
@@ -124,7 +124,7 @@
               <h4> {{e.School}} </h4>
               <h5> {{e.Major}} </h5>
               <h5>{{e.Minor}}</h5>
-              <p style = "word-break: break-all;"> Important Coursework: {{e.Coursework}} </p>
+              <p style = " white-space: normal;"> Important Coursework: {{e.Coursework}} </p>
             </div>
             {% endfor %}
             
@@ -134,7 +134,7 @@
             {% for p in proj %}
             <div class="resume-item">
               <h4>Senior graphic design specialist</h4>
-              <p style = "word-break: break-all;"> {{p.Infromation}} </p>
+              <p style = "white-space: normal;"> {{p.Infromation}} </p>
             </div>
             {% endfor %}
           </div>
@@ -156,7 +156,7 @@
               <h5> {{e.Startdate}} </h5>
               <h5> {{e.Enddate}} </h5>
               <p><em> {{e.Role}} </em></p>
-              <p style = "word-break: break-all;"> {{e.Information}} </p>
+              <p style = "white-space: normal;"> {{e.Information}} </p>
             </div>
             {% endfor %}
           </div>
@@ -168,7 +168,7 @@
               <h5> {{e.Startdate}} </h5>
               <h5> {{e.Enddate}} </h5>
               <p><em> {{e.Role}} </em></p>
-              <p style = "word-break: break-all;"> {{e.Information}} </p>
+              <p style = "white-space: normal;"> {{e.Information}} </p>
             </div>
             {% endfor %}
           </div>
@@ -184,7 +184,7 @@
         {% for s in skill %}
         <div class="section-title">
           <h2>Skills</h2>
-          <p  style = "word-break: break-all;"> {{s.Information}} </p>
+          <p  style = "white-space: normal;"> {{s.Information}} </p>
         </div>
         {% endfor %}
     

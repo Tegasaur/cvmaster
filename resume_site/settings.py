@@ -25,7 +25,7 @@ SECRET_KEY = '-ol7okte2w^8)0)%s8aox*sndde=8*hi#*h2^7%(5l_e8v3yv-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["tegacvmaster.herokuapp.com"]
+ALLOWED_HOSTS = ["tegacvmaster.herokuapp.com","127.0.0.1"]
 
 
 # Application definition
@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

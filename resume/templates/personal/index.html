@@ -36,7 +36,7 @@
   ======================================================== -->
 </head>
 {% for p in person %}
-<body style ="background: #040404 url( {{p.balanced_image.url}} );">
+<body style ="background: #040404 url( {{p.balanced_image.url}} )no-repeat; background-size: 100%;">
 {% endfor %}
 
   <!-- ======= Header ======= -->
@@ -79,13 +79,13 @@
       </div>
       {% for p in person %}
       <div class="row">
-        <div class="col-lg-6" data-aos="fade-right">
+        <div class="col-lg-4" data-aos="fade-right">
           <img src="{{p.profile_image.url}}" class="img-fluid" alt="">
         </div>
-        <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <div class="row">
-            <div class="col-lg-6">
-              <p style = "word-break: break-all;">{{p.Profile}}</p>
+            <div>
+              <p style = "white-space: normal;">{{p.Profile}}</p>
             </div>
           </div>
         </div>
@@ -115,7 +115,7 @@
             <h4> {{e.School}} </h4>
             <h5> {{e.Major}} </h5>
             <h5> {{e.Minor}} </h5>
-            <p style = "word-break: break-all;">Important Coursework: {{e.Coursework}} </p>
+            <p style = " white-space: normal;">Important Coursework: <br> {{e.Coursework}} </p>
           </div>
           {% endfor %}
         </div>
@@ -153,7 +153,7 @@
             <h5> {{i.Startdate}} </h5>
             <h5> {{i.Enddate}} </h5>
             <p><em> {{i.Role}} </em></p>
-            <p style = "word-break: break-all;"> {{i.Information}} </p>
+            <p style = " white-space: normal;"> {{i.Information}} </p>
           </div>
           {% endfor %}
         </div>
@@ -165,7 +165,7 @@
             <h5> {{i.Startdate}} </h5>
             <h5> {{i.Enddate}} </h5>
             <p><em> {{i.Role}} </em></p>
-            <p style = "word-break: break-all;"> {{i.Information}} </p>
+            <p style = " white-space: normal;"> {{i.Information}} </p>
           </div>
           {% endfor %}
         </div>
