@@ -12,12 +12,14 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
-  <!-- Favicons --> 
-              
+  <!-- Favicons -->
+
   <link href="{% static 's2/img/favicon-32x32.png' %}" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{% static 's2/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -46,12 +48,10 @@
 
       {% for p in person %}
       <div class="logo mr-auto">
-        
+
         <h1><a href="index.html">{{p.Name}}</a></h1>
-        
+
       </div>
-      <p class =  "col-4" style ='padding-top: 15px'> Phone: +1 {{number1}}-{{number2}}-{{number3}} </p>
-      <p class =  "col-4" style ='padding-top: 15px'> Email: {{p.Email}} </p>
 
       <div class="header-social-links">
         <a href="https://{{p.LinkedIn}} " class="linkedin"><i class="icofont-linkedin"></i></i></a>
@@ -63,10 +63,11 @@
 
   <!-- ======= Hero Section ======= -->
   {% for p in person %}
-  <section style="background-image: url( {{p.balanced_image.url}} );" id="hero" class="d-flex flex-column justify-content-center align-items-center">
-  {% endfor %}
-    <div class="container text-center text-md-left" data-aos="fade-up" >
-      <h1 style = "text-align: centre;">Summary</h1>
+  <section style="background-image: url( {{p.balanced_image.url}} );" id="hero"
+    class="d-flex flex-column justify-content-center align-items-center">
+    {% endfor %}
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1 style="text-align: centre;">Summary</h1>
       {% for p in person %}
       <h2> {{p.Profile}} </h2>
       {% endfor %}
@@ -108,7 +109,7 @@
 
         <div class="row">
           {% for e in experience %}
-          <div class="" style="margin: 10px auto;">
+          <div class="" style="margin: 10px 10px;">
             <h4>{{e.Organization}}</h4>
             <ul>
               <li><i class="bx bx-check-double"></i> Start Date : {{e.Startdate}}</li>
@@ -131,7 +132,7 @@
     </section><!-- End About Section -->
 
 
-        <!-- ======= Services Section ======= -->
+    <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container">
 
@@ -139,19 +140,19 @@
           <h2>Involvements</h2>
         </div>
 
-        <div class="row" >
+        <div class="row">
           {% for i in involve %}
-          <div class="col-md-6" style="margin: 0 auto;">
+          <div class="col-md-6" style="margin: 10px 10px;">
             <div class="icon-box">
               <h4><a href="#">{{i.Organization}}</a></h4>
-                <p><i class="bx bx-check-double"></i>Start Date : {{i.Startdate}}</p>
-                <p><i class="bx bx-check-double"></i>End Date : {{i.Enddate}}</p>
-                <p><i class="bx bx-check-double"></i>Role: {{i.Role}}</p>
-                <p>{{i.Information}}</p>
+              <p><i class="bx bx-check-double"></i>Start Date : {{i.Startdate}}</p>
+              <p><i class="bx bx-check-double"></i>End Date : {{i.Enddate}}</p>
+              <p><i class="bx bx-check-double"></i>Role: {{i.Role}}</p>
+              <p>{{i.Information}}</p>
             </div>
           </div>
           {% endfor %}
-      </div>
+        </div>
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
@@ -164,26 +165,26 @@
         </div>
 
         <div class="owl-carousel testimonials-carousel">
-          
+
           {% for p in proj %}
           <div class="testimonial-item">
             <h3>{{p.Title}}</h3>
-            <p style = "white-space: normal;">
+            <p style="white-space: normal;">
               {{p.Infromation}}
             </p>
           </div>
           {% endfor %}
-      </div>
+        </div>
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
       <div class="container">
-        
+
         <div class="section-title">
           <h2>Skills</h2>
         </div>
-        
+
         <div class="row">
           <div class="  d-flex align-items-stretch" style="margin: 0 auto;">
             <div class="member">
@@ -191,7 +192,7 @@
               <img src=" {{ p.profile_image.url}} " alt="" width="200" height="200">
               {% endfor %}
               {% for s in skill %}
-              <p style = "white-space: normal;">
+              <p style="white-space: normal;">
                 Skills: <br>
                 {{s.Information}}
               </p>

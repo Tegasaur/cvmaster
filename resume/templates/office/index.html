@@ -13,11 +13,13 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  
+
   <link href="{% static 's3/img/favicon-32x32.png' %}" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{% static 's3/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -40,12 +42,11 @@
 
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
   {% for p in person %}
   <!-- ======= Hero Section ======= -->
-  <section style="background-image: url( {{p.balanced_image.url}} );" id="hero" class="d-flex flex-column justify-content-center">
+  <section style="background-image: url( {{p.balanced_image.url}} );" id="hero"
+    class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1> {{p.Name}} </h1>
       <div class="social-links">
@@ -67,7 +68,7 @@
           <p> {{p.Profile}} </p>
         </div>
         {% endfor %}
-        
+
       </div>
     </section><!-- End About Section -->
 
@@ -77,36 +78,36 @@
 
         <div class="section-title">
           <h2> Professional Information </h2>
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Education</h3>
-            {% for e in education %}
-            <div class="resume-item">
-              <h4>Major: {{e.Major}} </h4>
-              <h4>Minor: {{e.Minor}} </h4>
-              <p><em> {{e.School}} </em></p>
-              <h5> Coursework </h5>
-              <div class="container">
-                <p style = "white-space: normal;">{{e.Coursework}}</p>
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="resume-title">Education</h3>
+              {% for e in education %}
+              <div class="resume-item">
+                <h4>Major: {{e.Major}} </h4>
+                <h4>Minor: {{e.Minor}} </h4>
+                <p><em> {{e.School}} </em></p>
+                <h5> Coursework </h5>
+                <div class="container">
+                  <p style="white-space: normal;">{{e.Coursework}}</p>
+                </div>
               </div>
+              {% endfor %}
             </div>
-            {% endfor %}
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            {% for e in experience %}
-            <div class="resume-item">
-              <h4> {{e.Role}} </h4>
-              <p><em> {{e.Organization}} </em></p>
-              <h5> {{e.Startdate}} </h5>
-              <h5> {{e.Enddate}} </h5>
-              <p style = "white-space: normal;"> {{e.Information}} </p>
+            <div class="col-lg-6">
+              <h3 class="resume-title">Professional Experience</h3>
+              {% for e in experience %}
+              <div class="resume-item">
+                <h4> {{e.Role}} </h4>
+                <p><em> {{e.Organization}} </em></p>
+                <h5> {{e.Startdate}} </h5>
+                <h5> {{e.Enddate}} </h5>
+                <p style="white-space: normal;"> {{e.Information}} </p>
+              </div>
+              {% endfor %}
             </div>
-            {% endfor %}
           </div>
-        </div>
 
-      </div>
+        </div>
     </section><!-- End Resume Section -->
 
     <!-- ======= Resume Section ======= -->
@@ -114,40 +115,40 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Projects</h3>
-            {% for e in proj %}
-            <div class="resume-item">
-              <h4> {{e.Title}} </h4>
-              <div class="container">
-                <p style = "white-space: normal;">{{e.Infromation}}</p>
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="resume-title">Projects</h3>
+              {% for e in proj %}
+              <div class="resume-item">
+                <h4> {{e.Title}} </h4>
+                <div class="container">
+                  <p style="white-space: normal;">{{e.Infromation}}</p>
+                </div>
               </div>
+              {% endfor %}
             </div>
-            {% endfor %}
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title"> Involvement </h3>
-            {% for e in involve %}
-            <div class="resume-item">
-              <h4> {{e.Role}} </h4>
-              <p><em> {{e.Organization}} </em></p>
-              <h5> {{e.Startdate}} </h5>
-              <h5> {{e.Enddate}} </h5>
-              <p style = "white-space: normal;"> {{e.Information}} </p>
+            <div class="col-lg-6">
+              <h3 class="resume-title"> Involvement </h3>
+              {% for e in involve %}
+              <div class="resume-item">
+                <h4> {{e.Role}} </h4>
+                <p><em> {{e.Organization}} </em></p>
+                <h5> {{e.Startdate}} </h5>
+                <h5> {{e.Enddate}} </h5>
+                <p style="white-space: normal;"> {{e.Information}} </p>
+              </div>
+              {% endfor %}
             </div>
-            {% endfor %}
           </div>
-        </div>
 
-      </div>
+        </div>
     </section><!-- End Resume Section -->
 
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
       <div class="container" data-aos="fade-up">
-        
+
         <div class="section-title">
           <h2>Skills</h2>
         </div>
@@ -159,7 +160,7 @@
             {% for p in person  %}
             <img src="{{ p.profile_image.url}}" class="testimonial-img" alt="">
             {% endfor %}
-            <p style = "white-space: normal;">{{s.Information}}</p>
+            <p style="white-space: normal;">{{s.Information}}</p>
           </div>
         </div>
         {% endfor %}
@@ -171,31 +172,31 @@
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
-        
+
         <div class="section-title">
           <h2>Contact</h2>
         </div>
         {% for p in person %}
         <div class="info">
-              <div class="address col-4">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p> {{p.Address}} </p>
-              </div>
-
-              <div class="email col-4">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p> {{p.Email}} </p>
-              </div>
-
-              <div class="phone col-4">
-                <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p> +1 {{number1}}-{{number2}}-{{number3}} </p>
-              </div>
+          <div class="address col-4">
+            <i class="icofont-google-map"></i>
+            <h4>Location:</h4>
+            <p> {{p.Address}} </p>
           </div>
-          {% endfor %}
+
+          <div class="email col-4">
+            <i class="icofont-envelope"></i>
+            <h4>Email:</h4>
+            <p> {{p.Email}} </p>
+          </div>
+
+          <div class="phone col-4">
+            <i class="icofont-phone"></i>
+            <h4>Call:</h4>
+            <p> +1 {{number1}}-{{number2}}-{{number3}} </p>
+          </div>
+        </div>
+        {% endfor %}
 
       </div>
     </section><!-- End Contact Section -->
@@ -207,7 +208,7 @@
   <footer id="footer">
     <div class="container">
       <h3> {{p.Name}} </h3>
-           <div class="social-links">
+      <div class="social-links">
         <a href=" https://{{p.LinkedIn}} " class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">

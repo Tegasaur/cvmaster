@@ -32,7 +32,7 @@ def template(request, user_username):
     skill = SkillModel.object.filter(user = request.user)
     template = TemplateModel.object.filter(user = request.user)
     t = TemplateModel.object.filter(user = request.user).values()[0]['Temp']
-    return render(request, t+"/index.html", {'education':education, 
+    return render(request, "lumia"+"/index.html", {'education':education, 
                                                     'experience':experience,
                                                     'proj':project,
                                                     'involve':involve,

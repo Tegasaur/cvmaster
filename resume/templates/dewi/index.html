@@ -16,7 +16,9 @@
   <link href="{% static 's5/img/favicon-32x32.png' %}" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{% static 's5/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -41,13 +43,15 @@
 <body>
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  {% for p in person %}
+  <section style="background: url({{p.balanced_image.url}}) no-repeat; background-size: cover;" id="hero">
+    {% endfor %}
     {% for p in person %}
-    <div style="background-image: url( {{p.balanced_image.url}} ) no-repeat; background-size: 100%;" class="hero-container" data-aos="fade-up" data-aos-delay="150">
-      
+    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+
       <h1>{{p.Name}}</h1>
-      
-      
+
+
     </div>
     {% endfor %}
   </section><!-- End Hero -->
@@ -69,9 +73,9 @@
           </div>
 
           <div class="col-lg-8 pt-3 pt-lg-0 content">
-            
+
             <h5> Summary</h5>
-            <p style = "white-space: normal;">{{p.Profile}}</p>
+            <p style="white-space: normal;">{{p.Profile}}</p>
             {% endfor %}
           </div>
 
@@ -81,7 +85,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= About Boxes Section ======= -->
-    <section  id="about-boxes" class="about-boxes">
+    <section id="about-boxes" class="about-boxes">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>education</h2>
@@ -174,8 +178,8 @@
           {% for p in proj %}
           <div class="testimonial-item">
             <h3> {{p.Title}} </h3>
-            <p style = "white-space: normal;"></p>
-              {{p.Infromation}}
+            <p style="white-space: normal;"></p>
+            {{p.Infromation}}
             </p>
           </div>
           {% endfor %}
@@ -189,7 +193,7 @@
     <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div style="margin-bottom: 100px;" class="section-title">
           <h2>skills</h2>
           <p>Skills</p>
         </div>
@@ -199,7 +203,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-info">
-                <p style = "white-space: normal;"> {{s.Information}} </p>
+                <p style="white-space: normal;"> {{s.Information}} </p>
               </div>
             </div>
           </div>
@@ -214,44 +218,44 @@
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
-    <div class=" section-title">
-        <h2>Contact</h2>
-        <p>Contact Us</p>
-      </div>
+        <div class=" section-title">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div>
 
-      <div class="row">
+        <div class="row">
 
-        {% for p in person %}
-        <div class="col-lg-12">
+          {% for p in person %}
+          <div class="col-lg-12">
 
-          <div class="row">
-            <div class="col-md-12">
-              <div class="info-box">
-                <i class="bx bx-map"></i>
-                <h3>Our Address</h3>
-                <p> {{p.Address}} </p>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p> {{p.Address}} </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p> {{p.Email}} </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p> +1 {{number1}}-{{number2}}-{{number3}} </p>
+                </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="info-box mt-4">
-                <i class="bx bx-envelope"></i>
-                <h3>Email Us</h3>
-                <p> {{p.Email}} </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="info-box mt-4">
-                <i class="bx bx-phone-call"></i>
-                <h3>Call Us</h3>
-                <p> +1 {{number1}}-{{number2}}-{{number3}} </p>
-              </div>
-            </div>
+
           </div>
+          {% endfor %}
 
         </div>
-        {% endfor %}
-
-      </div>
 
       </div>
     </section><!-- End Contact Section -->
@@ -260,7 +264,7 @@
 
   <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
   <div id="preloader"></div>
-  
+
 
   <!-- Vendor JS Files -->
   <script src="{% static 's5/vendor/jquery/jquery.min.js' %}"></script>

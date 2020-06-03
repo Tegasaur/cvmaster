@@ -18,7 +18,9 @@
   <link href="{% static 's4/img/favicon-32x32.png' %}" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{% static 's4/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -39,8 +41,9 @@
   ======================================================== -->
 </head>
 {% for p in person %}
-<body style ="background: #040404 url( {{p.balanced_image.url}} )no-repeat; background-size: 100%;">
-{% endfor %}
+
+<body style="background: #040404 url( {{p.balanced_image.url}} )no-repeat; background-size: 100%;">
+  {% endfor %}
 
   <!-- ======= Header ======= -->
   <header id="header" class="header-tops">
@@ -49,7 +52,7 @@
       <h1><a href="index.html"> {{p.Name}} </a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-     
+
       {% endfor %}
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -88,7 +91,7 @@
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <div class="row">
             <div>
-              <p style = "white-space: normal;">{{p.Profile}}</p>
+              <p style="white-space: normal;">{{p.Profile}}</p>
             </div>
           </div>
         </div>
@@ -97,7 +100,7 @@
 
     </div><!-- End About Me -->
 
-    
+
   </section><!-- End About Section -->
 
   <!-- ======= Resume Section ======= -->
@@ -118,7 +121,7 @@
             <h4> {{e.School}} </h4>
             <h5> {{e.Major}} </h5>
             <h5> {{e.Minor}} </h5>
-            <p style = " white-space: normal;">Important Coursework: <br> {{e.Coursework}} </p>
+            <p style=" white-space: normal;">Important Coursework: <br> {{e.Coursework}} </p>
           </div>
           {% endfor %}
         </div>
@@ -127,7 +130,7 @@
           {% for p in proj %}
           <div class="resume-item">
             <h4> {{p.Title}} </h4>
-            <p style = "word-break: break-all;">
+            <p style="word-break: break-all;">
               {{p.Infromation}}
             </p>
           </div>
@@ -149,26 +152,26 @@
 
       <div class="row">
         <div class="col-lg-6">
-          {% for i in involve %}
           <h3 class="resume-title">Involvements</h3>
+          {% for i in involve %}
           <div class="resume-item">
             <h4> {{i.Organization}} </h4>
             <h5> {{i.Startdate}} </h5>
             <h5> {{i.Enddate}} </h5>
             <p><em> {{i.Role}} </em></p>
-            <p style = " white-space: normal;"> {{i.Information}} </p>
+            <p style=" white-space: normal;"> {{i.Information}} </p>
           </div>
           {% endfor %}
         </div>
         <div class="col-lg-6">
-          {% for i in experience %}
           <h3 class="resume-title">Experience</h3>
+          {% for i in experience %}
           <div class="resume-item">
             <h4> {{i.Organization}} </h4>
             <h5> {{i.Startdate}} </h5>
             <h5> {{i.Enddate}} </h5>
             <p><em> {{i.Role}} </em></p>
-            <p style = " white-space: normal;"> {{i.Information}} </p>
+            <p style=" white-space: normal;"> {{i.Information}} </p>
           </div>
           {% endfor %}
         </div>
@@ -185,11 +188,11 @@
         <h2>skills</h2>
         <p>My Skills</p>
       </div>
-      
+
       <div class="col-md-12 d-flex align-items-stretch">
         {% for s in skill %}
         <div class="info-box">
-          <p style = "white-space: normal;"> {{s.Information}} </p>
+          <p style="white-space: normal;"> {{s.Information}} </p>
         </div>
         {% endfor %}
       </div>
