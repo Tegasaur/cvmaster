@@ -13,7 +13,6 @@ cycler==0.10.0
 Django==3.0.5
 django-crispy-forms==1.9.0
 django-formset-bootstrap==1.4.0.dev3
-Flask==1.1.2
 gast==0.3.3
 google-auth==1.14.1
 google-auth-oauthlib==0.4.1
@@ -25,13 +24,9 @@ idna==2.9
 itsdangerous==1.1.0
 Jinja2==2.11.2
 joblib==0.14.1
-Keras==2.3.1
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.0
 kiwisolver==1.2.0
 Markdown==3.2.1
 MarkupSafe==1.1.1
-matplotlib==3.2.1
 more-itertools==8.3.0
 numpy==1.18.3
 oauthlib==3.1.0
@@ -52,10 +47,6 @@ PyYAML==5.3.1
 requests==2.23.0
 requests-oauthlib==1.3.0
 rsa==4.0
-scikit-learn==0.22.2.post1
-scipy==1.4.1
-six==1.14.0
-sklearn==0.0
 sqlparse==0.3.1
 tensorboard==2.2.1
 tensorboard-plugin-wit==1.6.0.post3
