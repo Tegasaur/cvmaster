@@ -28,7 +28,6 @@ kiwisolver==1.2.0
 Markdown==3.2.1
 MarkupSafe==1.1.1
 more-itertools==8.3.0
-numpy==1.18.3
 oauthlib==3.1.0
 opencv-python==4.2.0.34
 opt-einsum==3.2.1
@@ -48,10 +47,6 @@ requests==2.23.0
 requests-oauthlib==1.3.0
 rsa==4.0
 sqlparse==0.3.1
-tensorboard==2.2.1
-tensorboard-plugin-wit==1.6.0.post3
-tensorflow==2.2.0rc4
-tensorflow-estimator==2.2.0
 termcolor==1.1.0
 urllib3==1.25.9
 wcwidth==0.1.9
